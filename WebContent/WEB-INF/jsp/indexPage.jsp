@@ -4,9 +4,10 @@
 
 <html>
 <head>
-<title>Welcome</title>
+<title>Main page</title>
 </head>
 <body>
-<h2>Court Reservation Page</h2>
+<h2>Main page</h2>
+<a href="${contextPath}/reservationQuery">Court Reservation</a> <br>
 </body>
 </html>

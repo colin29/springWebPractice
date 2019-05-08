@@ -4,12 +4,11 @@
 
 <html>
 <head>
-<title>Welcome</title>
+<title>Custom Welcome</title>
 </head>
 <body>
-<h2>Welcome to Court Reservation System</h2>
-
+<h2>A Special Welcome With Much Fanfare!</h2>
 <a href="${contextPath}/reservationQuery">Court Reservation</a> <br>
-Today is <fmt:formatDate value="${today}" pattern="yyyy-MM-dd" />.
-</body>
+Hurrah! Hurrah! The date today is <fmt:formatDate value="${today}" pattern="yyyy-MM-dd" />!
+</body>	
 </html>

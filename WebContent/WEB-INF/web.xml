@@ -14,10 +14,17 @@
 		<servlet-name>court</servlet-name>
 		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
 		<init-param>
-			<param-name>contextConfigLocation</param-name>
-			<param-value>/WEB-INF/spring/court-service.xml</param-value>
-		</init-param>
-
+		<param-name>contextClass</param-name>
+		<param-value>
+			org.springframework.web.context.support.AnnotationConfigWebApplicationContext
+		</param-value>
+	</init-param>
+	<init-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>
+			colin29.court
+		</param-value>
+	</init-param>
 		<load-on-startup>1</load-on-startup>
 	</servlet>
 

@@ -1,4 +1,4 @@
-package colin29.court.web;
+package colin29.court.controllers;
 
 import java.util.List;
 
