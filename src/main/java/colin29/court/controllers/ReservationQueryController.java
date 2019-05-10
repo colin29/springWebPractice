@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import colin29.court.domain.Reservation;
+import colin29.court.domain.reservation.Reservation;
 import colin29.court.service.ReservationService;
 
 @Controller

@@ -1,4 +1,4 @@
-package colin29.court.domain;
+package colin29.court.domain.reservation;
 
 public class SportType {
 	private int id;

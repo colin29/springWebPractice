@@ -1,4 +1,4 @@
-package colin29.court.domain;
+package colin29.court.domain.reservation;
 
 import java.util.Date;
 

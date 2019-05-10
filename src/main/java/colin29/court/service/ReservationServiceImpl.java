@@ -4,9 +4,9 @@ import java.util.ArrayList;
 import java.util.GregorianCalendar;
 import java.util.List;
 
-import colin29.court.domain.Player;
-import colin29.court.domain.Reservation;
-import colin29.court.domain.SportType;
+import colin29.court.domain.reservation.Player;
+import colin29.court.domain.reservation.Reservation;
+import colin29.court.domain.reservation.SportType;
 
 public class ReservationServiceImpl implements ReservationService {
 	public static final SportType TENNIS = new SportType(1, "Tennis");

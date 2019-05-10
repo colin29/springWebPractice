@@ -2,6 +2,7 @@ package colin29.court;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -14,15 +15,21 @@ import org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandl
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 import org.springframework.web.servlet.view.JstlView;
 
+import colin29.court.datastore.DataStoreServiceImpl;
+import colin29.court.datastore.DataStoreConfig;
+import colin29.court.service.DataStoreService;
 import colin29.court.service.ReservationService;
 import colin29.court.service.ReservationServiceImpl;
 
 @Configuration
 @ComponentScan(basePackages = "colin29.court.controllers") // will scan this directory for components (for us,
 															// @Controllers)
-public class SpringConfig extends WebMvcConfigurationSupport {
+public class SpringServiceConfig extends WebMvcConfigurationSupport {
 
-	Logger logger = LoggerFactory.getLogger(SpringConfig.class);
+	@Autowired
+	DataStoreConfig dataStoreConfig;
+
+	Logger logger = LoggerFactory.getLogger(SpringServiceConfig.class);
 
 	/* Mapping to Controllers */
 	@Bean
@@ -78,6 +85,11 @@ public class SpringConfig extends WebMvcConfigurationSupport {
 	@Bean
 	public ReservationService reservationService() {
 		return new ReservationServiceImpl();
+	}
+
+	@Bean
+	public DataStoreService dataStoreService() {
+		return new DataStoreServiceImpl(dataStoreConfig.employeeDAO());
 	}
 
 }
